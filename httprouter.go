@@ -9,6 +9,9 @@ import (
 )
 type Request struct {
 Name string `json:"name"`
+Id int `json:"id"`
+Address string `json:"address"`
+Zip int `json:"zip"`
 }
 
 type Response struct {
@@ -17,11 +20,14 @@ Greet string `json:"greeting"`
 
 
 func post_h (w http.ResponseWriter, r *http.Request, p httprouter.Params) {
-  // Stub an user to be populated from the body
+  // Stub a request to be populated from the body
     req := Request{}
 
 	  // Populate the request data
     json.NewDecoder(r.Body).Decode(&req)
+
+
+
 
     // Marshal provided interface into JSON structure
     reqj, _ := json.Marshal(req)
