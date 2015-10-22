@@ -67,13 +67,12 @@ func main() {
 
 
 Onkar@onkar-personal MINGW64 /c/Go/src/golang/httpjson
-$ go run post_demo.go
+$ go run httprouter.go
 
 Onkar@onkar-personal MINGW64 /c/Go/src/golang/httpjson
-$ curl -H "Content-Type: application/json" -d '{"name":"Rookie"}' http://localhost:3030/hello
+$  curl -H "Content-Type: application/json" -X POST -d '{"name":"Foo Bar"}' http://127.0.0.1:3030/hello
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100    46  100    29  100    17   1812   1062 --:--:-- --:--:-- --:--:-- 29000
-{"greeting":"Hello, Rookie!"}
+100    48  100    30  100    18     30     18  0:00:01 --:--:--  0:00:01 30000{"greeting":"Hello, Foo Bar!"}
 
 **********************************************************************/
